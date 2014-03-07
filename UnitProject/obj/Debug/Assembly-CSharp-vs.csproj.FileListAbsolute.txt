@@ -1,0 +1,11 @@
+E:\Git\Archer\UnitProject\Temp\bin\Debug\Assembly-CSharp.dll
+E:\Git\Archer\UnitProject\Temp\bin\Debug\Assembly-CSharp.pdb
+E:\Git\Archer\UnitProject\Temp\bin\Debug\UnityEditor.dll
+E:\Git\Archer\UnitProject\Temp\bin\Debug\UnityEngine.dll
+E:\Git\Archer\UnitProject\Temp\bin\Debug\Mono.Cecil.dll
+E:\Git\Archer\UnitProject\Temp\bin\Debug\nunit.framework.dll
+E:\Git\Archer\UnitProject\Temp\bin\Debug\Unity.DataContract.dll
+E:\Git\Archer\UnitProject\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+E:\Git\Archer\UnitProject\obj\Debug\Assembly-CSharp-vs.csprojResolveAssemblyReference.cache
+E:\Git\Archer\UnitProject\obj\Debug\Assembly-CSharp.dll
+E:\Git\Archer\UnitProject\obj\Debug\Assembly-CSharp.pdb
