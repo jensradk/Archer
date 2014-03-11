@@ -7,8 +7,11 @@ public class LightFading : MonoBehaviour
 
 	public float alphaMin = 0.2f;
 	public float alphaMax = 0.9f;
+	
+	private float alphaRangeHalf;
+	private float alphaMid;
 
-	public float sinPeriod = 13.0f;
+	public float sinPeriod = 2.0f;
 
 	private float timer;
 
@@ -16,7 +19,8 @@ public class LightFading : MonoBehaviour
 	void Start()
 	{
 		this.sr = this.GetComponent<SpriteRenderer>();
-
+		this.alphaRangeHalf = ( this.alphaMax - this.alphaMin ) / 2.0f;
+		this.alphaMid = this.alphaMin + this.alphaRangeHalf;
 	}
 
 	// Update is called once per frame
@@ -26,10 +30,10 @@ public class LightFading : MonoBehaviour
 		{
 			this.timer += Time.deltaTime;
 			while( this.timer > sinPeriod )
-				this.timer -= sinPeriod;
+			    this.timer -= sinPeriod;
 
-			float mid = alphaMin + ( alphaMax / 2.0f );
-			float newAlpha = mid + ( Mathf.Sin( this.timer / sinPeriod ) * ( alphaMax - alphaMin ) );
+			float newAlpha = this.alphaMid + ( Mathf.Sin( ( this.timer / this.sinPeriod ) * Mathf.PI * 2.0f ) * ( this.alphaRangeHalf ) );
+			Debug.Log( "Alpha = " + newAlpha + ", time = " + this.timer + ", period = " + this.sinPeriod );
 
 			this.sr.color = new Color( 1.0f, 1.0f, 1.0f, newAlpha );
 		}
