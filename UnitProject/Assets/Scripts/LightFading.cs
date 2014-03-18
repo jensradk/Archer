@@ -33,8 +33,7 @@ public class LightFading : MonoBehaviour
 			    this.timer -= sinPeriod;
 
 			float newAlpha = this.alphaMid + ( Mathf.Sin( ( this.timer / this.sinPeriod ) * Mathf.PI * 2.0f ) * ( this.alphaRangeHalf ) );
-			Debug.Log( "Alpha = " + newAlpha + ", time = " + this.timer + ", period = " + this.sinPeriod );
-
+			
 			this.sr.color = new Color( 1.0f, 1.0f, 1.0f, newAlpha );
 		}
 	}
